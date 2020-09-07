@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-
-Vue.config.productionTip = false
+import VueWebsocket from "vue-websocket";
+Vue.use(VueWebsocket, "https://streamer.cryptocompare.com/");
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: '#app',
+  render: h => h(App)
+})
